@@ -1,0 +1,44 @@
+.nav-wrapper {
+    width: 100%;
+    height: 100vh;
+    background: #161616;
+}
+
+.nav-wrapper nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0 auto;
+    text-align: content;
+    position: absolute;
+    top: 50%;
+}
+
+.link {
+    transition: all 0.3s ease;
+}
+
+.link span {
+    display: inline-block;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+    font-size: 32px;
+    text-transform: uppercase;
+    pointer-events: none;
+    transition: transform 0.1s linear;
+}
+
+.cursor {
+    pointer-events: none;
+    position: fixed;
+    padding: 0.3 rem;
+    background-color: #fff;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+}
+
+.link:hover ~ .cursor {
+    transform: translate(-50%, -50%) scale(8);
+}
